@@ -1,0 +1,67 @@
+{
+    "configuracion": {
+        "titulo_sitio": "Biblioteca sin Censura",
+        "whatsapp_numero": "51905886853",
+        "mensaje_default": "Hola, estoy interesado en",
+        "email_contacto": "bibliotecasincensura@gmail.com"
+    },
+    "cursos": [
+        {
+            "id": 1,
+            "titulo": "Curso de Ciberseguridad",
+            "resumen": "Aprende a proteger tu identidad digital con el curso completo de ciberseguridad.",
+            "descripcion": "Este curso completo de ciberseguridad te enseñará a identificar vulnerabilidades, implementar medidas de protección y responder ante incidentes de seguridad. Aprenderás sobre criptografía, seguridad de redes, pentesting ético y mucho más. Ideal para quienes desean iniciar una carrera en el campo de la seguridad informática.",
+            "imagen": "ciberseguridad",
+            "precio": 10,
+            "mensaje_whatsapp": "Quiero información sobre el curso de Ciberseguridad"
+        },
+        {
+            "id": 2,
+            "titulo": "Excel Avanzado",
+            "resumen": "Domina hojas de cálculo con macros, tablas dinámicas y fórmulas",
+            "descripcion": "Conviértete en un experto de Excel con este curso avanzado. Aprende a utilizar macros VBA, tablas dinámicas complejas, fórmulas anidadas, Power Query y Power Pivot. Perfecto para profesionales que necesitan analizar grandes cantidades de datos y crear informes automatizados.",
+            "imagen": "excel",
+            "precio": 5,
+            "mensaje_whatsapp": "Quiero información sobre el curso de Excel Avanzado"
+        },
+        {
+            "id": 3,
+            "titulo": "Electrónica Básica",
+            "resumen": "Aprende los fundamentos de circuitos electrónicos desde cero",
+            "descripcion": "Introducción completa a la electrónica básica. Conocerás los componentes fundamentales como resistencias, capacitores, transistores y diodos. Aprenderás a leer diagramas esquemáticos, soldar componentes y crear tus propios proyectos electrónicos básicos.",
+            "imagen": "electronica",
+            "precio": 5,
+            "mensaje_whatsapp": "Quiero información sobre el curso de Electrónica Básica"
+        }
+
+    ],
+    "tienda": [
+        {
+            "id": 1,
+            "titulo": "Netflix Premium",
+            "descripcion": "Cuenta personal de Netflix, incluye soporte 24/7. Presiona en el botón de comprar para más información.",
+            "imagen": "tienda-netflix",
+            "precio": 15,
+            "precio_original": 25,
+            "mensaje_whatsapp": "Quiero comprar la cuenta de Netflix Premium"
+        },
+        {
+            "id": 2,
+            "titulo": "HBO Max",
+            "descripcion": "Cuenta personal de HBO Max, incluye soporte 24/7. Presiona en el botón de comprar para más información.",
+            "imagen": "tienda-hbo-max",
+            "precio": 10,
+            "precio_original": 25,
+            "mensaje_whatsapp": "Quiero comprar la cuenta de HBO Max"
+        },
+        {
+            "id": 3,
+            "titulo": "Auricular Bluetooth Pro 6",
+            "descripcion": "Auricular Bluetooth de alta calidad con cancelación de ruido. Presiona en el botón de comprar para más información.",
+            "imagen": "tienda-auricular-bluetooth",
+            "precio": 20,
+            "precio_original": 25,
+            "mensaje_whatsapp": "Quiero comprar el auricular Bluetooth Pro 6"
+        }
+    ]
+}

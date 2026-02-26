@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Bundle - Biblioteca sin Censura</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuente sans-serif profesional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header / Navegación -->
+    <header class="header">
+        <div class="container header-content">
+            <!-- Logo con enlace a la página principal -->
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Biblioteca sin Censura</span>
+            </a>
+            
+            <!-- Botón hamburguesa para móvil -->
+            <button class="hamburger-menu" onclick="toggleMenu()" aria-label="Abrir menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Menú de navegación -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="index.html#cursos" class="nav-link">Cursos</a>
+                <a href="index.html#bundles" class="nav-link">Bundles</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </nav>
+            
+            <!-- Botón de WhatsApp -->
+            <a href="https://wa.me/51905886853" class="btn-whatsapp" target="_blank">
+                <span class="whatsapp-icon">💬</span>
+                <span>Atención por WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Sección de Detalles del Bundle -->
+    <section class="bundle-detalle">
+        <div class="container">
+            <a href="index.html#bundles" class="back-link">← Volver a los bundles</a>
+            
+            <div id="bundle-content" class="bundle-content">
+                <!-- Los detalles del bundle se cargan dinámicamente desde la base de datos -->
+                <div class="loading">Cargando detalles del bundle...</div>
+            </div>
+            
+            <!-- Cursos incluidos en el bundle -->
+            <div id="bundle-cursos" class="bundle-cursos">
+                <!-- Cursos incluidos cargados dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Biblioteca sin Censura</h3>
+                <p class="footer-text">Contenido digital de alto valor.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61562438782947" class="social-link">Facebook</a>
+                    <a href="https://www.tiktok.com/@bibliotecasincensura" class="social-link">TikTok</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Enlaces Rápidos</h3>
+                <nav class="footer-nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="#cursos">Cursos</a>
+                    <a href="#bundles">Bundles</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contacto (solo mensajes)</h3>
+                <p class="footer-text">📧 bibliotecasincensura@gmail.com</p>
+                <p class="footer-text">📱 +51 905 886 853</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-message">🎯 Atención principal por WhatsApp – <a href="https://wa.me/51905886853" target="_blank">enlace aquí</a></p>
+            <p class="copyright">© 2024 Biblioteca sin Censura. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="database.js"></script>
+    <script src="app.js"></script>
+    <script>
+        /**
+         * Alterna la visibilidad del menú de navegación en dispositivos móviles
+         * Añade o remueve la clase 'active' al elemento nav-menu
+         */
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger-menu');
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Cerrar el menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-menu .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const navMenu = document.getElementById('navMenu');
+                const hamburger = document.querySelector('.hamburger-menu');
+                if (window.innerWidth <= 768) {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
+
+        // Cerrar el menú al redimensionar la ventana
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const navMenu = document.getElementById('navMenu');
+                const hamburger = document.querySelector('.hamburger-menu');
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        // Cargar detalles del bundle al iniciar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const slug = urlParams.get('slug');
+            
+            if (slug) {
+                cargarDetallesBundle(slug);
+            } else {
+                document.getElementById('bundle-content').innerHTML = '<p class="error">No se especificó el bundle.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

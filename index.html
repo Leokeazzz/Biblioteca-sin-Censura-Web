@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Codificación de caracteres UTF-8 para soportar caracteres especiales -->
+    <meta charset="UTF-8">
+    <!-- Configuración de viewport para diseño responsive en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Metadatos SEO - Título principal del sitio -->
+    <title>Biblioteca Sin Censura - Cursos y Tienda Digital</title>
+    <!-- Descripción meta para motores de búsqueda -->
+    <meta name="description" content="Biblioteca Sin Censura es una biblioteca digital que ofrece cursos, software y contenido digital de alto valor. Aprende y adquiere recursos exclusivos en línea.">
+    <!-- Palabras clave para indexación en buscadores -->
+    <meta name="keywords" content="Biblioteca Digital, Cursos Online, Tienda Digital, Software, Contenido Exclusivo, Aprendizaje en línea, Biblioteca Sin Censura">
+    <!-- Autor del sitio web -->
+    <meta name="author" content="Biblioteca Sin Censura">
+    <!-- Directrices para rastreadores web -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon para mostrar en la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="bsc-logo.jpg">
+    
+    <!-- Open Graph para redes sociales y resultados enriquecidos en buscadores -->
+    <meta property="og:title" content="Biblioteca Sin Censura - Cursos y Tienda Digital">
+    <meta property="og:description" content="Explora cursos, software y contenido digital exclusivo en Biblioteca Sin Censura.">
+    <meta property="og:image" content="imagenes/logo-bsc.png">
+    <meta property="og:url" content="https://www.bibliotecasincesura.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Hoja de estilos principal del sitio -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Preconexión a servidores de fuentes para optimizar carga -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuente tipográfica Roboto de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header / Navegación -->
+    <header class="header">
+        <div class="container header-content">
+            <!-- Botón de WhatsApp siempre visible -->
+            <a href="#" class="btn-whatsapp btn-header" id="btnWhatsappHeader" target="_blank">
+                <span class="whatsapp-icon">💬</span>
+                <span>WhatsApp</span>
+            </a>
+            
+            <!-- Botón hamburguesa para móvil -->
+            <button class="hamburger-menu" onclick="toggleMenu()" aria-label="Abrir menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Menú de navegación -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#cursos" class="nav-link">Cursos</a>
+                <a href="#tienda" class="nav-link">Tienda</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero con Logo -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <!-- Logo en la sección hero con imagen -->
+                <a href="index.html" class="hero-logo">
+                    <img src="bsc-logo.jpg" alt="Logo Biblioteca Sin Censura" class="logo-img">
+                    <span class="logo-text">Biblioteca sin Censura</span>
+                </a>
+                <h1 class="hero-title">Explora cursos, software y juegos desde un solo lugar</h1>
+                <p class="hero-subtitle">Tu biblioteca digital completa con contenido de calidad para tu desarrollo profesional y personal.</p>
+                <a href="#cursos" class="btn-cta">Ver contenido</a>
+            </div>
+            <div class="hero-image">
+                <div class="hero-illustration">
+                    <div class="book-shelf">
+                        <div class="book book-1"></div>
+                        <div class="book book-2"></div>
+                        <div class="book book-3"></div>
+                        <div class="book book-4"></div>
+                        <div class="book book-5"></div>
+                    </div>
+                    <div class="digital-icon">💻</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Cursos -->
+    <section id="cursos" class="cursos-section">
+        <div class="container">
+            <h2 class="section-title">Cursos</h2>
+            <p class="section-subtitle">Explora nuestro catálogo de cursos profesionales</p>
+            <div id="cursos-grid" class="cursos-grid">
+                <!-- Los cursos se cargan dinámicamente desde el archivo JSON -->
+                <div class="loading">Cargando cursos...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Tienda -->
+    <section id="tienda" class="tienda-section">
+        <div class="container">
+            <h2 class="section-title">Tienda</h2>
+            <p class="section-subtitle">Aprovecha nuestras ofertas especiales o accede al catálogo desde WhatsApp.</p>
+            <div id="tienda-grid" class="tienda-grid">
+                <!-- Los productos se cargan dinámicamente desde el archivo JSON -->
+                <div class="loading">Cargando tienda...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Biblioteca sin Censura</h3>
+                <p class="footer-text">Contenido digital de alto valor.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61562438782947" class="social-link">Facebook</a>
+                    <a href="https://www.tiktok.com/@bibliotecasincensura" class="social-link">TikTok</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Enlaces Rápidos</h3>
+                <nav class="footer-nav">
+                    <a href="#cursos">Cursos</a>
+                    <a href="#tienda">Tienda</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contacto</h3>
+                <p class="footer-text">📧 bibliotecasincensura@gmail.com</p>
+                <p class="footer-text">📱 +51 905 886 853</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-message">🎯 Atención principal por WhatsApp – <a href="#" id="footerWhatsappLink">enlace aquí</a></p>
+            <p class="copyright">© 2024 Biblioteca sin Censura. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script>
+        /**
+         * Alterna la visibilidad del menú de navegación en dispositivos móviles
+         * Añade o remueve la clase 'active' al elemento nav-menu
+         */
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger-menu');
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Cerrar el menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-menu .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const navMenu = document.getElementById('navMenu');
+                const hamburger = document.querySelector('.hamburger-menu');
+                if (window.innerWidth <= 768) {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
+
+        // Cerrar el menú al redimensionar la ventana
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const navMenu = document.getElementById('navMenu');
+                const hamburger = document.querySelector('.hamburger-menu');
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

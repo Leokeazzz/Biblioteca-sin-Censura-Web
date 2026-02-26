@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Codificación de caracteres UTF-8 para soportar caracteres especiales -->
+    <meta charset="UTF-8">
+    <!-- Configuración de viewport para diseño responsive en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Metadatos SEO - Título principal del sitio -->
+    <title>Biblioteca Sin Censura - Cursos y Tienda Digital</title>
+    <!-- Descripción meta para motores de búsqueda -->
+    <meta name="description" content="Biblioteca Sin Censura es una biblioteca digital que ofrece cursos, software y contenido digital de alto valor. Aprende y adquiere recursos exclusivos en línea.">
+    <!-- Palabras clave para indexación en buscadores -->
+    <meta name="keywords" content="Biblioteca Digital, Cursos Online, Tienda Digital, Software, Contenido Exclusivo, Aprendizaje en línea, Biblioteca Sin Censura">
+    <!-- Autor del sitio web -->
+    <meta name="author" content="Biblioteca Sin Censura">
+    <!-- Directrices para rastreadores web -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon para mostrar en la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="imagenes/logo-bsc.png">
+    
+    <!-- Open Graph para redes sociales y resultados enriquecidos en buscadores -->
+    <meta property="og:title" content="Biblioteca Sin Censura - Cursos y Tienda Digital">
+    <meta property="og:description" content="Explora cursos, software y contenido digital exclusivo en Biblioteca Sin Censura.">
+    <meta property="og:image" content="imagenes/logo-bsc.png">
+    <meta property="og:url" content="https://www.bibliotecasincesura.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Hoja de estilos principal del sitio -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Preconexión a servidores de fuentes para optimizar carga -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuente tipográfica Roboto de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header / Navegación -->
+    <header class="header">
+        <div class="container header-content">
+            <!-- Botón de WhatsApp siempre visible -->
+            <a href="#" class="btn-whatsapp btn-header" id="btnWhatsappHeader" target="_blank">
+                <span class="whatsapp-icon">💬</span>
+                <span>Atención por WhatsApp</span>
+            </a>
+            
+            <!-- Botón hamburguesa para móvil -->
+            <button class="hamburger-menu" onclick="toggleMenu()" aria-label="Abrir menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Menú de navegación -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html#cursos" class="nav-link">Cursos</a>
+                <a href="index.html#tienda" class="nav-link">Tienda</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Detalles del Curso -->
+    <section class="curso-detalle">
+        <div class="container">
+            <a href="index.html#cursos" class="back-link">← Volver a los cursos</a>
+            
+            <div id="curso-content" class="curso-content">
+                <!-- Los detalles del curso se cargan dinámicamente -->
+                <div class="loading">Cargando detalles del curso...</div>
+            </div>
+            
+            <!-- Sección de cursos relacionados -->
+            <div class="cursos-relacionados" id="cursos-relacionados-section" style="display: none;">
+                <h3 class="related-title">Otros cursos que te pueden interesar</h3>
+                <div id="cursos-relacionados" class="cursos-grid">
+                    <!-- Cursos relacionados cargados dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Biblioteca sin Censura</h3>
+                <p class="footer-text">Contenido digital de alto valor.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61562438782947" class="social-link">Facebook</a>
+                    <a href="https://www.tiktok.com/@bibliotecasincensura" class="social-link">TikTok</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Enlaces Rápidos</h3>
+                <nav class="footer-nav">
+                    <a href="index.html">Inicio</a>
+                    <a href="#cursos">Cursos</a>
+                    <a href="#tienda">Tienda</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contacto</h3>
+                <p class="footer-text">📧 bibliotecasincensura@gmail.com</p>
+                <p class="footer-text">📱 +51 905 886 853</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-message">🎯 Atención principal por WhatsApp – <a href="#" id="footerWhatsappLink">enlace aquí</a></p>
+            <p class="copyright">© 2024 Biblioteca sin Censura. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script>
+        /**
+         * Alterna la visibilidad del menú de navegación en dispositivos móviles
+         */
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger-menu');
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Cerrar el menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-menu .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const navMenu = document.getElementById('navMenu');
+                const hamburger = document.querySelector('.hamburger-menu');
+                if (window.innerWidth <= 768) {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
+
+        // Cerrar el menú al redimensionar la ventana
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const navMenu = document.getElementById('navMenu');
+                const hamburger = document.querySelector('.hamburger-menu');
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        // Cargar detalles del curso al iniciar la página
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Primero cargar los datos
+            await cargarDatosJSON();
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+            
+            if (id) {
+                cargarDetallesCurso(parseInt(id));
+            } else {
+                document.getElementById('curso-content').innerHTML = '<p class="error">No se especificó el curso.</p>';
+            }
+        });
+
+        /**
+         * Carga los detalles de un curso específico
+         * @param {number} id - ID del curso a cargar
+         */
+        async function cargarDetallesCurso(id) {
+            try {
+                const curso = cargarDetallesCursoFn(id);
+                
+                if (!curso) {
+                    document.getElementById('curso-content').innerHTML = '<p class="error">Curso no encontrado</p>';
+                    return;
+                }
+                
+                const icono = getIcono(curso.imagen);
+                const enlaceWhatsApp = generarEnlaceWhatsApp(curso);
+                
+                // Generar HTML de detalles del curso
+                document.getElementById('curso-content').innerHTML = `
+                    <div class="curso-header">
+                        <div class="curso-imagen">
+                            <span>${icono}</span>
+                        </div>
+                        <div class="curso-details">
+                            <h1 class="curso-titulo">${curso.titulo}</h1>
+                            <p class="curso-descripcion">${curso.descripcion}</p>
+                            <div class="curso-precio">S/ ${curso.precio.toFixed(2)} <span>soles</span></div>
+                            <a href="${enlaceWhatsApp}" class="btn-cta" target="_blank">Acceder al curso</a>
+                        </div>
+                    </div>
+                `;
+                
+                // Cargar cursos relacionados
+                cargarCursosRelacionados(id);
+                
+            } catch (error) {
+                console.error('Error al cargar detalles del curso:', error);
+                document.getElementById('curso-content').innerHTML = 
+                    '<div class="error">Error al cargar los detalles del curso</div>';
+            }
+        }
+
+        /**
+         * Carga cursos relacionados en la página de detalles
+         * @param {number} excludeId - ID del curso actual a excluir
+         */
+        function cargarCursosRelacionados(excludeId) {
+            if (!datosGlobales || !datosGlobales.cursos) return;
+            
+            const cursos = datosGlobales.cursos
+                .filter(curso => curso.id !== excludeId)
+                .slice(0, 3);
+            
+            if (cursos.length === 0) return;
+            
+            const container = document.getElementById('cursos-relacionados');
+            const section = document.getElementById('cursos-relacionados-section');
+            
+            const cursosHTML = cursos.map(curso => crearTarjetaCurso(curso)).join('');
+            container.innerHTML = cursosHTML;
+            section.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
