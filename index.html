@@ -1,58 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Codificación de caracteres UTF-8 para soportar caracteres especiales -->
     <meta charset="UTF-8">
-    <!-- Configuración de viewport para diseño responsive en dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Metadatos SEO - Título principal del sitio -->
     <title>Biblioteca Sin Censura - Cursos y Tienda Digital</title>
-    <!-- Descripción meta para motores de búsqueda -->
     <meta name="description" content="Biblioteca Sin Censura es una biblioteca digital que ofrece cursos, software y contenido digital de alto valor. Aprende y adquiere recursos exclusivos en línea.">
-    <!-- Palabras clave para indexación en buscadores -->
     <meta name="keywords" content="Biblioteca Digital, Cursos Online, Tienda Digital, Software, Contenido Exclusivo, Aprendizaje en línea, Biblioteca Sin Censura">
-    <!-- Autor del sitio web -->
     <meta name="author" content="Biblioteca Sin Censura">
-    <!-- Directrices para rastreadores web -->
     <meta name="robots" content="index, follow">
     
-    <!-- Favicon para mostrar en la pestaña del navegador -->
     <link rel="icon" type="image/png" href="bsc-logo.jpg">
     
-    <!-- Open Graph para redes sociales y resultados enriquecidos en buscadores -->
     <meta property="og:title" content="Biblioteca Sin Censura - Cursos y Tienda Digital">
     <meta property="og:description" content="Explora cursos, software y contenido digital exclusivo en Biblioteca Sin Censura.">
     <meta property="og:image" content="imagenes/logo-bsc.png">
     <meta property="og:url" content="https://www.bibliotecasincesura.com">
     <meta property="og:type" content="website">
     
-    <!-- Hoja de estilos principal del sitio -->
     <link rel="stylesheet" href="style.css">
-    <!-- Preconexión a servidores de fuentes para optimizar carga -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fuente tipográfica Roboto de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header / Navegación -->
     <header class="header">
         <div class="container header-content">
-            <!-- Botón de WhatsApp siempre visible -->
             <a href="#" class="btn-whatsapp btn-header" id="btnWhatsappHeader" target="_blank">
                 <span class="whatsapp-icon">💬</span>
                 <span>WhatsApp</span>
             </a>
-            
-            <!-- Botón hamburguesa para móvil -->
+        
             <button class="hamburger-menu" onclick="toggleMenu()" aria-label="Abrir menú">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
             
-            <!-- Menú de navegación -->
             <nav class="nav-menu" id="navMenu">
                 <a href="#cursos" class="nav-link">Cursos</a>
                 <a href="#tienda" class="nav-link">Tienda</a>
@@ -61,17 +46,15 @@
         </div>
     </header>
 
-    <!-- Sección Hero con Logo -->
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <!-- Logo en la sección hero con imagen -->
                 <a href="index.html" class="hero-logo">
                     <img src="bsc-logo.jpg" alt="Logo Biblioteca Sin Censura" class="logo-img">
                     <span class="logo-text">Biblioteca sin Censura</span>
                 </a>
                 <h1 class="hero-title">Explora cursos, software y juegos desde un solo lugar</h1>
-                <p class="hero-subtitle">Tu biblioteca digital completa con contenido de calidad para tu desarrollo profesional y personal.</p>
+                <p class="hero-subtitle">Biblioteca Sin Censura es una distribuidora confiable de contenido digital de alto valor, diseñada para ofrecerte acceso seguro y variado en un solo espacio.</p>
                 <a href="#cursos" class="btn-cta">Ver contenido</a>
             </div>
             <div class="hero-image">
@@ -89,25 +72,21 @@
         </div>
     </section>
 
-    <!-- Sección de Cursos -->
     <section id="cursos" class="cursos-section">
         <div class="container">
             <h2 class="section-title">Cursos</h2>
             <p class="section-subtitle">Explora nuestro catálogo de cursos profesionales</p>
             <div id="cursos-grid" class="cursos-grid">
-                <!-- Los cursos se cargan dinámicamente desde el archivo JSON -->
                 <div class="loading">Cargando cursos...</div>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Tienda -->
     <section id="tienda" class="tienda-section">
         <div class="container">
             <h2 class="section-title">Tienda</h2>
             <p class="section-subtitle">Aprovecha nuestras ofertas especiales o accede al catálogo desde WhatsApp.</p>
             <div id="tienda-grid" class="tienda-grid">
-                <!-- Los productos se cargan dinámicamente desde el archivo JSON -->
                 <div class="loading">Cargando tienda...</div>
             </div>
         </div>
@@ -118,7 +97,7 @@
         <div class="container footer-content">
             <div class="footer-section">
                 <h3 class="footer-title">Biblioteca sin Censura</h3>
-                <p class="footer-text">Contenido digital de alto valor.</p>
+                <p class="footer-text">Contenido digital de alto valor de forma segura para todos.</p>
                 <div class="social-links">
                     <a href="https://www.facebook.com/profile.php?id=61562438782947" class="social-link">Facebook</a>
                     <a href="https://www.tiktok.com/@bibliotecasincensura" class="social-link">TikTok</a>
@@ -144,13 +123,8 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="app.js"></script>
     <script>
-        /**
-         * Alterna la visibilidad del menú de navegación en dispositivos móviles
-         * Añade o remueve la clase 'active' al elemento nav-menu
-         */
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
             const hamburger = document.querySelector('.hamburger-menu');
