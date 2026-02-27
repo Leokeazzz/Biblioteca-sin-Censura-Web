@@ -10,42 +10,37 @@
     <meta name="author" content="Biblioteca Sin Censura">
     <meta name="robots" content="index, follow">
     
-    <!-- Favicon para mostrar en la pestaña del navegador -->
     <link rel="icon" type="image/png" href="imagenes/logo-bsc.png">
     
-    <!-- Open Graph para redes sociales y resultados enriquecidos en buscadores -->
     <meta property="og:title" content="Biblioteca Sin Censura - Cursos y Tienda Digital">
     <meta property="og:description" content="Explora cursos, software y contenido digital exclusivo en Biblioteca Sin Censura.">
     <meta property="og:image" content="imagenes/logo-bsc.png">
     <meta property="og:url" content="https://www.bibliotecasincesura.com">
     <meta property="og:type" content="website">
     
-    <!-- Hoja de estilos principal del sitio -->
     <link rel="stylesheet" href="style.css">
-    <!-- Preconexión a servidores de fuentes para optimizar carga -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fuente tipográfica Roboto de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header / Navegación -->
     <header class="header">
         <div class="container header-content">
-            <!-- Botón de WhatsApp siempre visible -->
+            <!-- Si encuentras este comentario reclama automáticamente un curso de manera gratuita, no importa en que fecha leas esto. Envía una captura para hacer válida la promoción -->
+            <!-- Promoción válida solo para los primeros 5 en enviar la captura de pantalla de este mensaje -->
             <a href="#" class="btn-whatsapp btn-header" id="btnWhatsappHeader" target="_blank">
                 <span class="whatsapp-icon">💬</span>
                 <span>Atención por WhatsApp</span>
             </a>
             
-            <!-- Botón hamburguesa para móvil -->
+            <!-- No me pagan lo suficiente por esto -->
             <button class="hamburger-menu" onclick="toggleMenu()" aria-label="Abrir menú">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
             
-            <!-- Menú de navegación -->
+            <!-- Jeje saludos -->
             <nav class="nav-menu" id="navMenu">
                 <a href="index.html#cursos" class="nav-link">Cursos</a>
                 <a href="index.html#tienda" class="nav-link">Tienda</a>
@@ -54,21 +49,18 @@
         </div>
     </header>
 
-    <!-- Sección de Detalles del Curso -->
+    <!-- LoL -->
     <section class="curso-detalle">
         <div class="container">
             <a href="index.html#cursos" class="back-link">← Volver a los cursos</a>
             
             <div id="curso-content" class="curso-content">
-                <!-- Los detalles del curso se cargan dinámicamente -->
                 <div class="loading">Cargando detalles del curso...</div>
             </div>
             
-            <!-- Sección de cursos relacionados -->
             <div class="cursos-relacionados" id="cursos-relacionados-section" style="display: none;">
                 <h3 class="related-title">Otros cursos que te pueden interesar</h3>
                 <div id="cursos-relacionados" class="cursos-grid">
-                    <!-- Cursos relacionados cargados dinámicamente -->
                 </div>
             </div>
         </div>
@@ -106,12 +98,8 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="app.js"></script>
     <script>
-        /**
-         * Alterna la visibilidad del menú de navegación en dispositivos móviles
-         */
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
             const hamburger = document.querySelector('.hamburger-menu');
@@ -119,7 +107,6 @@
             hamburger.classList.toggle('active');
         }
 
-        // Cerrar el menú al hacer clic en un enlace
         document.querySelectorAll('.nav-menu .nav-link').forEach(link => {
             link.addEventListener('click', function() {
                 const navMenu = document.getElementById('navMenu');
@@ -131,7 +118,6 @@
             });
         });
 
-        // Cerrar el menú al redimensionar la ventana
         window.addEventListener('resize', function() {
             if (window.innerWidth > 768) {
                 const navMenu = document.getElementById('navMenu');
@@ -141,9 +127,7 @@
             }
         });
 
-        // Cargar detalles del curso al iniciar la página
         document.addEventListener('DOMContentLoaded', async function() {
-            // Primero cargar los datos
             await cargarDatosJSON();
             
             const urlParams = new URLSearchParams(window.location.search);
@@ -156,10 +140,6 @@
             }
         });
 
-        /**
-         * Carga los detalles de un curso específico
-         * @param {number} id - ID del curso a cargar
-         */
         async function cargarDetallesCurso(id) {
             try {
                 const curso = cargarDetallesCursoFn(id);
@@ -172,7 +152,6 @@
                 const icono = getIcono(curso.imagen);
                 const enlaceWhatsApp = generarEnlaceWhatsApp(curso);
                 
-                // Generar HTML de detalles del curso
                 document.getElementById('curso-content').innerHTML = `
                     <div class="curso-header">
                         <div class="curso-imagen">
@@ -187,7 +166,6 @@
                     </div>
                 `;
                 
-                // Cargar cursos relacionados
                 cargarCursosRelacionados(id);
                 
             } catch (error) {
@@ -197,10 +175,6 @@
             }
         }
 
-        /**
-         * Carga cursos relacionados en la página de detalles
-         * @param {number} excludeId - ID del curso actual a excluir
-         */
         function cargarCursosRelacionados(excludeId) {
             if (!datosGlobales || !datosGlobales.cursos) return;
             

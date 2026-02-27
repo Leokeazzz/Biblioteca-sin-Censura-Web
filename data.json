@@ -8,30 +8,21 @@
     "cursos": [
         {
             "id": 1,
+            "titulo": "Acceso al Canal de Telegram",
+            "resumen": "Miles de cursos, libros y recursos gratuitos sin censura en nuestro canal de Telegram. Únete ahora y accede a todo el contenido sin restricciones.",
+            "descripcion": "Nuestro canal de Telegram es una biblioteca digital sin censura que ofrece acceso gratuito a miles de cursos, libros y recursos educativos en diversas áreas. Desde programación hasta diseño, pasando por marketing y desarrollo personal, nuestro canal es el lugar ideal para aprender sin límites. Únete hoy mismo y descubre un mundo de conocimiento al alcance de tu mano.",
+            "imagen": "telegram",
+            "precio": 10,
+            "mensaje_whatsapp": "Quiero información sobre el acceso al canal de Telegram"
+        },
+        {
+            "id": 2,
             "titulo": "Curso de Ciberseguridad",
             "resumen": "Aprende a proteger tu identidad digital con el curso completo de ciberseguridad.",
             "descripcion": "Este curso completo de ciberseguridad te enseñará a identificar vulnerabilidades, implementar medidas de protección y responder ante incidentes de seguridad. Aprenderás sobre criptografía, seguridad de redes, pentesting ético y mucho más. Ideal para quienes desean iniciar una carrera en el campo de la seguridad informática.",
             "imagen": "ciberseguridad",
             "precio": 10,
             "mensaje_whatsapp": "Quiero información sobre el curso de Ciberseguridad"
-        },
-        {
-            "id": 2,
-            "titulo": "Excel Avanzado",
-            "resumen": "Domina hojas de cálculo con macros, tablas dinámicas y fórmulas",
-            "descripcion": "Conviértete en un experto de Excel con este curso avanzado. Aprende a utilizar macros VBA, tablas dinámicas complejas, fórmulas anidadas, Power Query y Power Pivot. Perfecto para profesionales que necesitan analizar grandes cantidades de datos y crear informes automatizados.",
-            "imagen": "excel",
-            "precio": 5,
-            "mensaje_whatsapp": "Quiero información sobre el curso de Excel Avanzado"
-        },
-        {
-            "id": 3,
-            "titulo": "Electrónica Básica",
-            "resumen": "Aprende los fundamentos de circuitos electrónicos desde cero",
-            "descripcion": "Introducción completa a la electrónica básica. Conocerás los componentes fundamentales como resistencias, capacitores, transistores y diodos. Aprenderás a leer diagramas esquemáticos, soldar componentes y crear tus propios proyectos electrónicos básicos.",
-            "imagen": "electronica",
-            "precio": 5,
-            "mensaje_whatsapp": "Quiero información sobre el curso de Electrónica Básica"
         }
 
     ],

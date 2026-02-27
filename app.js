@@ -1,19 +1,13 @@
 /**
  * Biblioteca sin Censura - Aplicación Principal
- * Maneja la carga dinámica de datos y la navegación entre páginas
+ * Si estás leyendo esto, no tienes nada mejor que hacer?
  */
 
-// Variable global para almacenar los datos del JSON
 let datosGlobales = null;
 
-// Iconos para cada tipo de curso/producto
 const ICONOS = {
     'ciberseguridad': '🔒',
-    'excel': '📊',
-    'electronica': '⚡',
-    'python': '🐍',
-    'diseno': '🎨',
-    'web': '🌐',
+    'telegram': '📱',
     'tienda-netflix': '📺',
     'tienda-hbo-max': '🎬',
     'tienda-auricular-bluetooth': '🎧'
@@ -29,8 +23,7 @@ function getIcono(tipo) {
 }
 
 /**
- * Carga los datos desde el archivo JSON
- * @returns {Promise} Promesa que se resuelve cuando los datos se cargan
+ * @returns {Promise} Se resuelve cuando los datos se cargan
  */
 async function cargarDatosJSON() {
     try {
@@ -40,7 +33,6 @@ async function cargarDatosJSON() {
         }
         datosGlobales = await respuesta.json();
         
-        // Actualizar enlaces de WhatsApp con el número configurado
         actualizarEnlacesWhatsApp();
         
         return datosGlobales;
