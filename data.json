@@ -8,8 +8,8 @@
     "cursos": [
         {
             "id": 1,
-            "titulo": "Acceso al Canal de Telegram",
-            "resumen": "Miles de cursos, libros y recursos gratuitos sin censura en nuestro canal de Telegram. Únete ahora y accede a todo el contenido sin restricciones.",
+            "titulo": "Acceso a la Biblioteca Digital",
+            "resumen": "Miles de herramientas, recursos y libros sin censura en un solo lugar. Contenido actualizado constantemente para satisfacer tus necesidades de aprendizaje.",
             "descripcion": "Nuestro canal de Telegram es una biblioteca digital sin censura que ofrece acceso gratuito a miles de cursos, libros y recursos educativos en diversas áreas. Desde programación hasta diseño, pasando por marketing y desarrollo personal, nuestro canal es el lugar ideal para aprender sin límites. Únete hoy mismo y descubre un mundo de conocimiento al alcance de tu mano.",
             "imagen": "telegram",
             "precio": 10,
@@ -21,7 +21,7 @@
             "resumen": "Aprende a proteger tu identidad digital con el curso completo de ciberseguridad.",
             "descripcion": "Este curso completo de ciberseguridad te enseñará a identificar vulnerabilidades, implementar medidas de protección y responder ante incidentes de seguridad. Aprenderás sobre criptografía, seguridad de redes, pentesting ético y mucho más. Ideal para quienes desean iniciar una carrera en el campo de la seguridad informática.",
             "imagen": "ciberseguridad",
-            "precio": 10,
+            "precio": 5 ,
             "mensaje_whatsapp": "Quiero información sobre el curso de Ciberseguridad"
         }
 
@@ -44,15 +44,6 @@
             "precio": 10,
             "precio_original": 25,
             "mensaje_whatsapp": "Quiero comprar la cuenta de HBO Max"
-        },
-        {
-            "id": 3,
-            "titulo": "Auricular Bluetooth Pro 6",
-            "descripcion": "Auricular Bluetooth de alta calidad con cancelación de ruido. Presiona en el botón de comprar para más información.",
-            "imagen": "tienda-auricular-bluetooth",
-            "precio": 20,
-            "precio_original": 25,
-            "mensaje_whatsapp": "Quiero comprar el auricular Bluetooth Pro 6"
         }
     ]
 }
